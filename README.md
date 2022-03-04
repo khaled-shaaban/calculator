@@ -9,7 +9,7 @@ This package was developed for learning purposes.
 You can install the package via composer:
 
 ```bash
-composer require khaledshaaban/calculator
+composer require khaled-shaaban/calculator
 ```
 
 ## Usage
