@@ -1,0 +1,44 @@
+{
+    "name": "khaled-shaaban/calculator",
+    "description": "Calculator with minimal mathematical operations for learning purposes",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Khaled Shaaban",
+            "email": "khaled.shabaan277@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "scripts": {
+        "post-autoload-dump": [
+            "@php ./vendor/bin/testbench package:discover --ansi"
+        ],
+        "test": "phpunit",
+        "test-f": "phpunit --filter"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "orchestra/testbench": "^6.24"
+    },
+    "autoload": {
+        "psr-4": {
+            "KhaledShaaban\\Calculator\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "KhaledShaaban\\Calculator\\Tests\\": "tests"
+        }   
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "KhaledShaaban\\Calculator\\ServiceProvider"
+            ],
+            "aliases": {
+                "Calculator": "KhaledShaaban\\Calculator\\Facades\\Calculator"
+            }            
+        }
+    }
+}
